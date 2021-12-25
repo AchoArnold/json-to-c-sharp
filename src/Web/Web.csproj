@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.20.0" />
     <PackageReference Include="Radzen.Blazor" Version="3.13.10" />
     <PackageReference Include="Unclassified.NetRevisionTask" Version="0.4.2">
       <PrivateAssets>all</PrivateAssets>
