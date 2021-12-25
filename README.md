@@ -9,7 +9,7 @@ JSON to c sharp
 
 This tool instantly escapes a JSON string into a c# string variable. Paste a JSON structure on the left and the escaped c# string will be generated to the right, which you can paste into your program. The script has to make some assumptions, so double-check the output!
 
-![Screenshot](https://acho.arnold.cm/content/images/size/w2000/2021/11/screenshot-rocks.png)
+![header-image](https://user-images.githubusercontent.com/4196457/147392364-01f79d3f-bc97-4d00-80c0-c409ed1cfdc8.png)
 
 
 ### Security
