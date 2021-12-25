@@ -21,6 +21,7 @@ jobs:
         with:
           node-version: '14'
           cache: 'npm'
+          cache-dependency-path: './src/Web/package-lock.json'
       - run: npm install
         working-directory: ./src/Web
       - name: Build
