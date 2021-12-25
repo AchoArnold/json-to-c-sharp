@@ -3,7 +3,6 @@ JSON to c sharp
 
 [![Build](https://github.com/AchoArnold/json-to-c-sharp/actions/workflows/main.yml/badge.svg)](https://github.com/AchoArnold/json-to-c-sharp/actions/workflows/main.yml)
 [![GitHub contributors](https://img.shields.io/github/contributors/AchoArnold/json-to-c-sharp)](https://github.com/AchoArnold/json-to-c-sharp/graphs/contributors)
-[![codecov](https://codecov.io/gh/AchoArnold/json-to-c-sharp/branch/main/graph/badge.svg?token=JjzbuSYCDv)](https://codecov.io/gh/AchoArnold/json-to-c-sharp)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=AchoArnold_json-to-c-sharp&metric=alert_status)](https://sonarcloud.io/dashboard?id=AchoArnold_json-to-c-sharp)
 [![GitHub license](https://img.shields.io/github/license/AchoArnold/json-to-c-sharp?color=brightgreen)](https://github.com/AchoArnold/json-to-c-sharp/blob/master/LICENSE)
 
