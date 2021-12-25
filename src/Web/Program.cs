@@ -7,6 +7,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<ThemeService>();
 builder.Services.AddScoped<ClipboardService>();
+builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
@@ -17,6 +18,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+
+app.MapHealthChecks("/health");
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
