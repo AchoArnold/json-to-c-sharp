@@ -1,0 +1,26 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#blazor-error-ui {
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+textarea.input-textarea {
+    padding: 20px;
+    min-height: calc(100vh - 200px);
+    @apply focus:outline-none outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 px-5 w-full overflow-y-scroll rounded-none border-2 border-gray-300
+}
+
+textarea.input-textarea.has-error {
+    @apply border-rose-500 focus:border-rose-600 focus:ring-rose-600 focus:border-2 border-2 !important
+}
