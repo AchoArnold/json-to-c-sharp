@@ -46,7 +46,7 @@
     protected override void OnInitialized()
     {
         _themeService.Initialize(_navigationManager);
-        _version = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location).ProductVersion ?? string.Empty;
+        _version = Environment.GetEnvironmentVariable("GIT_COMMIT") ?? "dev";
     }
 
     void ChangeTheme(object value)
