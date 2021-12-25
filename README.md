@@ -6,7 +6,7 @@ JSON to c sharp
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=AchoArnold_json-to-c-sharp&metric=alert_status)](https://sonarcloud.io/dashboard?id=AchoArnold_json-to-c-sharp)
 [![GitHub license](https://img.shields.io/github/license/AchoArnold/json-to-c-sharp?color=brightgreen)](https://github.com/AchoArnold/json-to-c-sharp/blob/master/LICENSE)
 
-This tool instantly escapes a JSON string into a c# string variable. Paste a JSON structure on the left and the escaped c# string will be generated to the right, which you can paste into your program. The script has to make some assumptions, so double-check the output!
+This tool instantly escapes a JSON string into a C# string variable. Paste a JSON structure on the left and the escaped C# string will be generated to the right, which you can paste into your program. The script has to make some assumptions, so double-check the output!
 
 ![screely-1640461529886](https://user-images.githubusercontent.com/4196457/147392530-bce8c6b6-9aee-47d2-9616-c79d44fdf1cc.png)
 
