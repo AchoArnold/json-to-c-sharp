@@ -17,6 +17,10 @@
 
   <ItemGroup>
     <PackageReference Include="Radzen.Blazor" Version="3.13.10" />
+    <PackageReference Include="Unclassified.NetRevisionTask" Version="0.4.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

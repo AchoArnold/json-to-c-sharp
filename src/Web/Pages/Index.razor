@@ -5,29 +5,29 @@
 
 <PageTitle>Convert JSON String to C# String</PageTitle>
 
-
 <div class="w-full grid grid-cols-2 bg-gradient-to-b text-white from-violet-800 to-indigo-800 py-3">
     <div class="text-center pt-3">
         JSON
     </div>
     <div class="text-center pt-3">
         C#
-        <RadzenButton Disabled="@(_hasError || _cSharpString == string.Empty || _buttonName != DefaultButtonName)" class="ml-4" Click=@(_ => CopyTextToClipboard()) Text="@_buttonName" Icon="content_copy" ButtonStyle="ButtonStyle.Success" />
+        <RadzenButton Disabled="@(_hasError || _cSharpString == string.Empty || _buttonName != DefaultButtonName)" class="ml-4" Click="@(_ => CopyTextToClipboard())" Text="@_buttonName" Icon="content_copy" ButtonStyle="ButtonStyle.Success"/>
     </div>
     <div class="absolute inset-x-1/2 mt-4 ml-n2">
         <RadzenIcon Icon="arrow_right_alt"></RadzenIcon>
     </div>
 </div>
 <div class="grid grid-cols-2 gap-0">
-    <RadzenTextArea class=@(_hasError ? "input-textarea has-error": "input-textarea") @oninput=@(args => OnChange(args.Value, "TextArea with 5 maximum characters")) />
-    <RadzenTextArea ReadOnly="true" class="bg-slate-300 input-textarea text-black" Value="@_cSharpString" />
+    <RadzenTextArea Placeholder="Paste your JSON string here" class=@(_hasError ? "input-textarea has-error" : "input-textarea") @oninput="@(args => OnChange(args.Value, "TextArea with 5 maximum characters"))"/>
+    <RadzenTextArea ReadOnly="true" Placeholder="Escaped C sharp code will appear here" class="bg-slate-300 input-textarea text-black" Value="@_cSharpString"/>
 </div>
 
 @code {
-    private const string DefaultButtonName = "Copy Code";
+        private const string DefaultButtonName = "Copy Code";
     private bool _hasError;
     private string _cSharpString = string.Empty;
     private string _buttonName = DefaultButtonName;
+
     private async Task CopyTextToClipboard()
     {
         await _clipboardService.WriteTextAsync(_cSharpString);
@@ -40,19 +40,19 @@
         _hasError = false;
         _cSharpString = string.Empty;
     }
-    
+
     void OnChange(object? value, string name)
     {
         try
         {
             ResetState();
-            
+
             if (value == null)
             {
                 return;
             }
-            
-            // Validate JSON
+
+    // Validate JSON
             _ = JsonSerializer.Deserialize<dynamic>((string)value);
 
             var replacement = ((string)value).Replace("\"", "\"\"").Replace("\\\"\"\"", "\\\"");
@@ -63,6 +63,6 @@
             _hasError = true;
             _cSharpString = e.Message;
         }
-        Console.WriteLine($"{name} value changed to {value}");
     }
+
 }
