@@ -22,9 +22,12 @@ jobs:
           node-version: '14'
           cache: 'npm'
       - run: npm install
+        working-directory: ./src/Web
       - name: Build
+        working-directory: ./src/Web
         run: dotnet build --configuration Release --no-restore
       - name: Test
+        working-directory: ./src/Web
         run:  dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
       - name: Codecov
         uses: codecov/codecov-action@v1.5.2
