@@ -11,6 +11,7 @@ This tool instantly escapes a JSON string into a C# string variable. Paste a JSO
 ![screely-1640463327710](https://user-images.githubusercontent.com/4196457/147392954-897b1ba9-679d-4ed3-8e93-d8bc0491a989.png)
 
 
+
 ### Security
 
 If you discover any security related issues, please email arnoldewin@gmail.com instead of using the GitHub issues.
