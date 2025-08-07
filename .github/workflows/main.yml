@@ -19,7 +19,7 @@ jobs:
         run: dotnet restore
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '22'
           cache: 'npm'
           cache-dependency-path: './src/Web/package-lock.json'
       - run: npm install
@@ -80,4 +80,5 @@ jobs:
         working-directory: ./src/Web
         run: |
           docker build  -t arnoldacho.azurecr.io/json-to-c-sharp:${{ github.sha }}  -t arnoldacho.azurecr.io/json-to-c-sharp:latest --build-arg GIT_COMMIT=${{ github.sha }} .
+
           docker push  --all-tags arnoldacho.azurecr.io/json-to-c-sharp
